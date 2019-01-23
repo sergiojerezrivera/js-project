@@ -64,10 +64,37 @@ $(document).ready(function() {
         });
 
 
+        var colours;
+        $("#red-button").click(function(){
+            $("#green-css").attr("href", "./css/red.css");
+            colours = "red";
+            localStorage.setItem("Color", colours);
+        });
+
+        $("#blue-button").click(function(){
+            $("#green-css").attr("href", "./css/blue.css");
+            colours = "blue";
+            localStorage.setItem("Color", colours);
+        });
+
+        $("#green-button").click(function(){
+            $("#green-css").attr("href", "./css/styles.css");
+            colours = "green";
+            localStorage.setItem("Color", colours);
+        });
 
 
+        var colour = localStorage.getItem("Color");
 
+        if(colour === "red"){
+            $("#green-css").attr("href", "./css/red.css");
+        }
 
+        if(colour === "blue"){
+            $("#green-css").attr("href", "./css/blue.css");
+        } else {
+            ("#green-css").attr("href", "./css/styles.css");
+        }
 
 
   });

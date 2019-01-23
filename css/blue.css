@@ -1,0 +1,15 @@
+#logo {
+    background:blue;
+}
+
+#menu ul li:hover {
+    background: blue;
+}
+
+body {
+    background: url('../img/cielo.jpg');
+}
+
+.button-more {
+    background: blue;
+}

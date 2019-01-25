@@ -179,4 +179,21 @@ $(document).ready(function() {
 
         }
 
+
+
+//CREATE A WATCH FOR REALTIME TIME AND DATE
+
+        if(window.location.href.indexOf('watch') > -1) {
+
+            
+            setInterval(function(){
+                
+                var watch = moment().format('LTS');
+                $("#watch").html(watch);
+
+            }, 1000);
+
+
+        }
+
   });

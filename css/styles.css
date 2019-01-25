@@ -246,3 +246,15 @@ footer {
       background: #333;
       border: none;
   }
+
+
+  #watch {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: helvetica, Arial;
+      color: #333;
+      border: 5px dashed #333;
+      width: 30%;
+      padding: 30px;
+      margin: 0 auto;
+  }

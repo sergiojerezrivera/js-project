@@ -113,7 +113,7 @@ $(document).ready(function() {
 
         $(window).scroll(function(){
 
-            if ( $(this).scrollTop() > 500 ) {
+            if ( $(this).scrollTop() > 300 ) {
       
               $('.scroll-to-top').fadeIn();
       
@@ -166,10 +166,17 @@ $(document).ready(function() {
 
 //CREATING AN ACCORDION ABOUT ME
 
+        //Next line tells you to load this part of code when we are in ABOUT.HTML
+        if(window.location.href.indexOf('about') > -1) {
+            
+                //Next line for click in accordion tabs
+                //$( "#accordion" ).accordion();
+            
+                //Next line to do mouseover reaction on tabs
+                $( "#accordion" ).accordion({
+                    event: "mouseover"
+                  });
 
-            $( function() {
-                $( "#accordion" ).accordion();
-            });
-
+        }
 
   });

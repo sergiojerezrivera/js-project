@@ -81,9 +81,10 @@ body {
     padding: 7px;
 }
 
-.post h2{
+h2{
     font-size: 30px;
     color: #333;
+    font-family: Helvetica, Arial;
 }
 
 .post .date {
@@ -218,7 +219,7 @@ footer {
 
 /*Functionality of Scrolling Button*/
 
-  .scroll-to-top{
+  .scroll-to-top {
     text-decoration: none;
     position: fixed; 
     top: 80%;
@@ -229,7 +230,19 @@ footer {
  
   }
   
-  .scroll-to-top:hover{
+  .scroll-to-top:hover {
     transform:scale(1.25);
     transition: 1s;
+  }
+
+
+  #box {
+    width: 60%;
+    float: left;
+    margin-top: 50px;
+  }
+
+  #accordion .ui-state-active {
+      background: #333;
+      border: none;
   }

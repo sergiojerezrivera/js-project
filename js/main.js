@@ -1,18 +1,24 @@
 $(document).ready(function() {
 
+//SLIDER OF IMAGES
 
-    $('.slider').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1000,
-        auto: true,
-        autoControls: false,
-        stopAutoOnClick: true,
-        pager: false
-      });
+    //Next line tells you to load this part of code when we are in INDEX.HTML
+    if(window.location.href.indexOf('index') > -1) {
+        $('.slider').bxSlider({
+            mode: 'fade',
+            captions: true,
+            slideWidth: 1000,
+            auto: true,
+            autoControls: false,
+            stopAutoOnClick: true,
+            pager: false
+        });
+    }
 
 
 
+//JSON posts 
+    if(window.location.href.indexOf('index') > -1) {
       var posts = [
             {
                 title:    "Title number 1",
@@ -62,8 +68,11 @@ $(document).ready(function() {
             `;
             $("#posts").append(post);
         });
+    }
 
 
+
+//THEME BUTTONS COLOUR CHANGER & LOCALSTORAGE
         var colours;
         $("#red-button").click(function(){
             $("#green-css").attr("href", "./css/red.css");
@@ -99,6 +108,9 @@ $(document).ready(function() {
         }
 
 
+
+//SCROLLING FUNCTIONALITY WITH EFFECTS
+
         $(window).scroll(function(){
 
             if ( $(this).scrollTop() > 500 ) {
@@ -124,6 +136,8 @@ $(document).ready(function() {
 
 
 
+//CREATING A FAKE SESSION & CLOSE SESSION BUTTON AND REFRESH PAGE
+
           $("#login form").submit(function(){
             var form_name = $("#form_name").val();
 
@@ -147,6 +161,15 @@ $(document).ready(function() {
                 location.reload();
               });
           }
+
+
+
+//CREATING AN ACCORDION ABOUT ME
+
+
+            $( function() {
+                $( "#accordion" ).accordion();
+            });
 
 
   });

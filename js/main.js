@@ -208,7 +208,9 @@ $(document).ready(function() {
             });
 
             $.validate({
-                lang: 'en'
+                lang: 'en',
+                errorMessagePosition: 'top',
+                scrollToTopOnError: true
               });
 
         }

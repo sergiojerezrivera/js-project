@@ -196,4 +196,21 @@ $(document).ready(function() {
 
         }
 
+
+
+//PLUGIN FOR VALIDATE A FORM
+
+        if(window.location.href.indexOf('contact') > -1) {
+
+            //Next Line insert a Calendar with an specific format of entry Data
+            $("form input[name='date']").datepicker({
+                dateFormat: 'dd-mm-yy'
+            });
+
+            $.validate({
+                lang: 'en'
+              });
+
+        }
+
   });

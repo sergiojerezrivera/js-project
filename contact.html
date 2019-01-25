@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Proyect</title>
+
+    <!--My Own CSS files-->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!--StyleSheet that will allow to swap to another css files with different colours-->
+    <link id="green-css" rel="stylesheet" href="./css/styles.css"> 
+    
+    <!--JQuery FILES-->
+    <script src="./js/jquery-3.3.1-min.js"></script>
+    <script src="./js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    
+    
+    <!--My Own JS files-->
+    <script src="./js/main.js"></script>
+
+
+    <!--SCRIPT FOR FORMATING DATES MOMENT.JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/en-gb.js"></script>
+
+
+    <!--SCRIPT FOR VALIDATE FORM JQuery PLUGIN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+</head>
+<body>
+
+    <div id="buttons-set">
+        <div id="red-button"></div>
+        <div id="green-button"></div>
+        <div id="blue-button"></div>
+    </div>
+    <div class="clearfix"></div>
+
+    <section id="global">
+<!--**************************************************************************-->
+        <header>
+
+            <div id="logo"><h1>Proyecto JS</h1></div>
+
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="watch.html">Watch</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+<!--**************************************************************************-->
+        <!--Button to Scroll-->
+
+        <a href="#" class="scroll-to-top"><span><img src="./img/arrow-up.png" alt="arrow-up"></span></a>
+
+
+
+
+<!--**************************************************************************-->
+
+        <!--CONTENT-->
+        
+        <div id="box">
+            <h2>Form Contact</h2>
+           
+            <form action="#" method="POST" id="form-contact">
+                    <label for="Name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Introduce your name"
+                    data-validation="alphanumeric" data-validation="required">
+
+                    <label for="Surname">Surname</label>
+                    <input type="text" name="surname" id="surname" placeholder="Introduce your surname"
+                    data-validation="alphanumeric" data-validation="required">
+
+                    <label for="Email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Introduce your email"
+                    data-validation="email" data-validation="required">
+
+                    <label for="Date-Of-Birth">Date Of Birth</label>
+                    <input type="text" name="date" id="Date-Of-Birth" placeholder="Introduce your Date Of Birth" data-validation="required" data-validation="date" data-validation-format="dd-mm-yyyy">
+
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Introduce your age"
+                    data-validation="number" data-validation="required">
+
+                    <label for="Sex Gender">Sex Gender</label>
+                    <select name="sex" id="sex" data-validation="required">
+                        <option value="man">Man</option>
+                        <option value="woman">Woman</option>
+                    </select> 
+                    <br>
+                    <button type="submit">Send</button>
+            </form>
+        </div>
+
+
+            <aside id="sidebar">
+
+                <div id="about">
+                    <h4><span>Who Am I?</span></h4>
+                    <img src="./img/caracol.jpg" alt="Image">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, quibusdam non maxime eius temporibus accusantium iusto fugit dolor error praesentium!</p>
+                </div>
+
+
+                <div id="login">
+                    <h4><span>Identify yourself</span></h4>
+
+                    <form>
+
+                        <label for="Name">Name</label>
+                        <input type="text" name="name" id="form_name" placeholder="Introduce your name">
+
+                        <label for="Email">Email</label>
+                        <input type="email" name="email" placeholder="Introduce your email">
+
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" placeholder="Introduce your password"> <br>
+
+                        <button type="submit">Send</button>
+
+                </form>
+
+                </div>
+
+            </aside>
+
+            <div class="clearfix"></div>
+
+        </section>
+
+
+
+        
+    </section>
+    
+    
+    <!--END GLOBAL-->
+    <!--**************************************************************************-->
+    
+
+    <!--FOOTER-->
+    <footer>
+        
+        Master en Javascript Udemy &copy;
+
+    </footer>
+        
+        
+        
+    <!--**************************************************************************-->
+
+
+</body>
+</html>

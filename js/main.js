@@ -123,4 +123,30 @@ $(document).ready(function() {
           });
 
 
+
+          $("#login form").submit(function(){
+            var form_name = $("#form_name").val();
+
+            localStorage.setItem("form_name", form_name);
+          });
+
+
+          var form_name = localStorage.getItem("form_name");
+
+          if(form_name != null && form_name != "undefined" && form_name != Number) {
+              var about_parrafo = $("#about p");
+
+              about_parrafo.html("<strong>Welcome:  "+form_name+"</strong><br>");
+
+              about_parrafo.append("<br> <a href='#' id='logout'>End Session</a> ");
+
+              $("#login").hide();
+
+              $("#logout").click(function(){
+                localStorage.clear("form_name");
+                location.reload();
+              });
+          }
+
+
   });

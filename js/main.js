@@ -92,9 +92,35 @@ $(document).ready(function() {
 
         if(colour === "blue"){
             $("#green-css").attr("href", "./css/blue.css");
-        } else {
-            ("#green-css").attr("href", "./css/styles.css");
+        } 
+        
+        if (colour === "green"){
+            $("#green-css").attr("href", "./css/styles.css");
         }
+
+
+        $(window).scroll(function(){
+
+            if ( $(this).scrollTop() > 500 ) {
+      
+              $('.scroll-to-top').fadeIn();
+      
+            } else {
+      
+              $('.scroll-to-top').fadeOut();
+      
+            }
+      
+          });
+      
+          // on click, animate the scroll up the page
+          $('.scroll-to-top').click( function( e ) {
+      
+            e.preventDefault();
+            $('html, body').animate( {scrollTop : 0}, 800 );
+            
+      
+          });
 
 
   });
